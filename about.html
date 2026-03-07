@@ -8,6 +8,8 @@
 
 body{font-family:Arial;margin:0;background:#f7f9fc;}
 
+/* NAVIGATION BAR */
+
 nav{
 background:white;
 padding:12px 40px;
@@ -17,29 +19,106 @@ align-items:center;
 justify-content:space-between;
 }
 
-.navlinks{
+/* MENU CONTAINER */
+
+.menu-container{
+position:relative;
+margin-left:-10px;
+}
+
+/* HAMBURGER ICON */
+
+.menu-icon{
 display:flex;
-gap:30px;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+padding:10px 12px;
+border-radius:6px;
+transition:background .2s ease;
 }
 
-nav a{
+.menu-icon:hover{
+background:#FFF3ED;
+}
+
+/* HAMBURGER BARS */
+
+.menu-icon span{
+display:block;
+width:26px;
+height:3px;
+background:#333;
+border-radius:2px;
+transition:all .3s ease;
+}
+
+/* HAMBURGER TRANSFORMS TO X */
+
+.menu-container:hover .menu-icon span:nth-child(1){
+transform:translateY(8px) rotate(45deg);
+}
+
+.menu-container:hover .menu-icon span:nth-child(2){
+opacity:0;
+}
+
+.menu-container:hover .menu-icon span:nth-child(3){
+transform:translateY(-8px) rotate(-45deg);
+}
+
+/* DROPDOWN MENU */
+
+.menu-dropdown{
+opacity:0;
+transform:translateY(-10px);
+pointer-events:none;
+
+position:absolute;
+background:white;
+box-shadow:0 6px 16px rgba(0,0,0,.08);
+padding:8px 0;
+top:100%;
+left:0;
+min-width:200px;
+border-radius:10px;
+overflow:hidden;
+
+transition:opacity .35s ease, transform .35s ease;
+transition-delay:.15s;
+}
+
+/* SHOW MENU */
+
+.menu-container:hover .menu-dropdown{
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
+transition-delay:0s;
+}
+
+/* MENU LINKS */
+
+.menu-dropdown a{
+display:block;
+padding:12px 20px;
 text-decoration:none;
-font-weight:600;
 color:#333;
-font-size:16px;
-transition:color .2s ease;
+font-weight:600;
+transition:background .2s ease, color .2s ease;
 }
 
-nav a:hover{
-color:#1d4ed8;
+/* ORANGE HOVER */
+
+.menu-dropdown a:hover{
+background:#FFF3ED;
+color:#F26A3D;
 }
 
-nav a.active{
-color:#1d4ed8;
-}
+/* LOGO */
 
 .logo img{
-height:40px;
+height:60px;
 }
   
 section{
@@ -55,11 +134,21 @@ padding:80px 20px;
 
 <nav>
 
-<div class="navlinks">
+<div class="menu-container">
+
+<div class="menu-icon">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="menu-dropdown">
 <a href="index.html">Home</a>
-<a href="about.html" class="active">About</a>
+<a href="about.html">About</a>
 <a href="science.html">Science</a>
 <a href="contact.html">Contact</a>
+</div>
+
 </div>
 
 <div class="logo">
