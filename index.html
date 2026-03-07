@@ -27,24 +27,71 @@ display:flex;
 gap:30px;
 }
 
-nav a{
+/* NAVIGATION BAR */
+
+nav{
+background:white;
+padding:12px 40px;
+box-shadow:0 2px 6px rgba(0,0,0,.08);
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* HAMBURGER MENU */
+
+.menu-container{
+position:relative;
+}
+
+.menu-icon{
+font-size:28px;
+cursor:pointer;
+padding:5px 10px;
+}
+
+/* DROPDOWN MENU */
+
+.menu-dropdown{
+display:none;
+position:absolute;
+background:white;
+box-shadow:0 6px 16px rgba(0,0,0,.08);
+padding:8px 0;
+top:120%;
+left:0;
+min-width:200px;
+border-radius:6px;
+}
+
+/* MENU LINKS */
+
+.menu-dropdown a{
+display:block;
+padding:10px 18px;
 text-decoration:none;
-font-weight:600;
 color:#333;
-font-size:16px;
-transition:color .2s ease;
+font-weight:600;
+transition:background .2s ease, color .2s ease;
 }
 
-nav a:hover{
-color:#1d4ed8;
+/* HOVER EFFECT */
+
+.menu-dropdown a:hover{
+background:#FFF3ED;
+color:#F26A3D;
 }
 
-nav a.active{
-color:#1d4ed8;
+/* SHOW MENU ON HOVER */
+
+.menu-container:hover .menu-dropdown{
+display:block;
 }
+
+/* LOGO */
 
 .logo img{
-height:40px;
+height:60px;
 }
   
 .hero{
@@ -81,11 +128,19 @@ background:#e9edf4;
 
 <nav>
 
-<div class="navlinks">
-<a href="index.html" class="active">Home</a>
+<div class="menu-container">
+
+<div class="menu-icon">
+☰
+</div>
+
+<div class="menu-dropdown">
+<a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="science.html">Science</a>
 <a href="contact.html">Contact</a>
+</div>
+
 </div>
 
 <div class="logo">
