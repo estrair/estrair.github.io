@@ -133,7 +133,8 @@ margin-bottom:15px;
 }
 
 .full-banner{
-width:100%;
+width:100vw;
+margin-left:calc(-50vw + 50%);
 align-self:stretch;
 background:linear-gradient(
   90deg,
