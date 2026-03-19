@@ -136,11 +136,9 @@ margin-bottom:15px;
 width:100vw;
 margin-left:calc(-50vw + 50%);
 align-self:stretch;
-background:linear-gradient(
-  90deg,
-  rgba(62,127,128,0.7),
-  rgba(242,106,61,0.5)
-);
+
+background:rgba(0, 45, 65, 0.25);
+
 padding:18px 0;
 margin-bottom:20px;
 
@@ -153,14 +151,13 @@ align-items:center;
 backdrop-filter:blur(6px);
 -webkit-backdrop-filter:blur(6px);
 
-/* separation */
-border-top:1px solid rgba(255,255,255,0.25);
-border-bottom:1px solid rgba(255,255,255,0.25);
+/* subtle separation */
+border-top:1px solid rgba(255,255,255,0.2);
+border-bottom:1px solid rgba(255,255,255,0.2);
 
-/* glow */
+/* refined glow (less harsh than before) */
 box-shadow:
-0 8px 20px rgba(0,0,0,0.2),
-0 0 20px rgba(255,255,255,0.15);
+0 6px 16px rgba(0,0,0,0.25);
 
 /* animation */
 animation:fadeInUp 0.8s ease;
