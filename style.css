@@ -132,6 +132,13 @@ font-size:52px;
 margin-bottom:15px;
 }
 
+.subhead{
+font-size:22px;
+font-weight:400;
+margin-bottom:20px;
+opacity:.9;
+}
+
 .hero p{
 font-size:20px;
 max-width:700px;
