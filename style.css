@@ -132,6 +132,21 @@ font-size:52px;
 margin-bottom:15px;
 }
 
+.title-banner{
+background:linear-gradient(135deg,#3E7F80,#5A9A9C);
+padding:12px 34px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.title-banner{
+background:rgba(62,127,128,0.85);
+padding:10px 30px;
+border-radius:8px;
+margin-bottom:15px;
+}
+
 .subhead{
 font-size:22px;
 font-weight:400;
