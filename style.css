@@ -124,7 +124,9 @@ align-items:center;
 text-align:center;
 background:linear-gradient(135deg,#3E7F80,#F26A3D);
 color:white;
-padding:40px;
+
+margin-top:0;
+padding:60px 40px 40px 40px;
 }
 
 .hero h1{
@@ -135,31 +137,21 @@ margin-bottom:15px;
 .full-banner{
 width:100vw;
 margin-left:calc(-50vw + 50%);
-align-self:stretch;
 
 background:rgba(0, 45, 65, 0.25);
+padding:14px 0;
 
-padding:18px 0;
-margin-bottom:20px;
-
-/* center content */
 display:flex;
 justify-content:center;
 align-items:center;
 
-/* glass effect */
 backdrop-filter:blur(6px);
 -webkit-backdrop-filter:blur(6px);
 
-/* subtle separation */
-border-top:1px solid rgba(255,255,255,0.2);
 border-bottom:1px solid rgba(255,255,255,0.2);
 
-/* refined glow (less harsh than before) */
-box-shadow:
-0 6px 16px rgba(0,0,0,0.25);
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
 
-/* animation */
 animation:fadeInUp 0.8s ease;
 }
 
