@@ -310,3 +310,23 @@ max-width:900px;
 font-size:20px;
 color:rgba(255,255,255,0.6);
 }
+
+/* FORCE DARK CARDS */
+.page-card{
+background:rgba(255,255,255,0.05) !important;
+color:white !important;
+
+backdrop-filter:blur(6px);
+-webkit-backdrop-filter:blur(6px);
+
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 6px 20px rgba(0,0,0,0.3);
+}
+
+.page,
+.page p,
+.page h1,
+.page ul,
+.page li{
+color:white !important;
+}
