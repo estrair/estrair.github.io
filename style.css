@@ -84,7 +84,7 @@ margin-top:18px;
 }
 
 .logo img{
-height:38px;
+height:30px;
 display:block;
 }
 
@@ -291,20 +291,20 @@ color:white !important;
 /* NEW HOME HERO */
 
 .main-title{
-font-size:82px;
+font-size:96px;
 font-weight:800;
 letter-spacing:2px;
 color:#FF5A3C;
-margin:0 0 4px 0;
-line-height:.95;
+margin:0 0 2px 0;
+line-height:.92;
 }
 
 .hero-subtitle{
-font-size:34px;
+font-size:28px;
 font-weight:700;
 color:white;
 margin-top:0;
-margin-bottom:42px;
+margin-bottom:34px;
 letter-spacing:1px;
 }
 
@@ -340,10 +340,10 @@ color:#FF5A3C;
 min-height:88vh;
 display:flex;
 flex-direction:column;
-justify-content:center;
+justify-content:flex-start;
 align-items:center;
 text-align:center;
-padding:60px 30px;
+padding:90px 30px 30px 30px;
 }
 
 @media (max-width: 768px){
@@ -357,7 +357,7 @@ margin-top:12px;
 }
 
 .logo img{
-height:32px;
+height:26px;
 }
 
 .main-title{
@@ -465,4 +465,25 @@ margin-top:6px !important;
 margin-bottom:0 !important;
 font-weight:400 !important;
 max-width:700px;
+}
+
+/* GLOBAL TYPOGRAPHY BOOST */
+
+body{
+font-size:18px;
+}
+
+.page p,
+.problem p,
+.page li,
+.problem li{
+font-size:20px;
+}
+
+.page h1{
+font-size:46px;
+}
+
+.menu-dropdown a{
+font-size:24px;
 }
