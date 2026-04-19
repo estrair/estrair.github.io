@@ -84,7 +84,7 @@ margin-top:18px;
 }
 
 .logo img{
-height:50px;
+height:46px;
 display:block;
 }
 
@@ -318,15 +318,19 @@ margin-bottom:65px;
 }
 
 .hero-founder{
-font-size:28px;
+font-size:26px;
 color:white;
-margin-bottom:12px;
+margin-top:35px;
+margin-bottom:18px;
+font-weight:400;
 }
 
 .hero-email a{
 font-size:22px;
 color:#19D3DA;
 text-decoration:none;
+display:inline-block;
+margin-top:6px;
 }
 
 .hero-email a:hover{
@@ -354,7 +358,7 @@ margin-top:12px;
 }
 
 .logo img{
-height:42px;
+height:39px;
 }
 
 .main-title{
@@ -400,4 +404,14 @@ font-size:12px;
 padding:18px;
 }
 
+}
+
+p,
+li,
+.hero-statement,
+.hero-founder,
+.hero-email,
+.page p,
+.problem p{
+font-weight:400 !important;
 }
