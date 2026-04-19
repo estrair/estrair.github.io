@@ -446,3 +446,13 @@ line-height:1.35;
 .problem p{
 line-height:1.55;
 }
+
+.page-disclaimer{
+font-size:14px;
+line-height:1.5;
+color:rgba(255,255,255,0.58);
+margin-top:28px;
+margin-bottom:0;
+font-weight:400;
+letter-spacing:.2px;
+}
