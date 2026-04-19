@@ -283,32 +283,6 @@ box-shadow:0 6px 20px rgba(0,0,0,0.3);
 color:white !important;
 }
 
-.full-banner{
-width:100%;
-background:rgba(0, 45, 65, 0.25);
-
-padding:18px 0;
-margin:0 0 20px 0;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-backdrop-filter:blur(6px);
--webkit-backdrop-filter:blur(6px);
-
-border-top:1px solid rgba(255,255,255,0.15);
-border-bottom:1px solid rgba(255,255,255,0.15);
-
-box-shadow:0 6px 20px rgba(0,0,0,0.25);
-}
-
-.full-banner h1{
-margin:0;
-font-size:36px;
-color:#FF5A3C;
-}
-
 /* NEW HOME HERO */
 
 .main-title{
