@@ -72,6 +72,27 @@ EstrAir is in the research and development phase. No products are currently avai
 
 </section>
 
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+function toggleMenu() {
+document.getElementById("mobileMenu").classList.toggle("show");
+}
+
+window.toggleMenu = toggleMenu;
+
+document.addEventListener("click", function(e){
+const menu = document.getElementById("mobileMenu");
+const button = document.querySelector(".menu-icon");
+
+if (!menu.contains(e.target) && !button.contains(e.target)){
+menu.classList.remove("show");
+}
+});
+
+});
+</script>
+
 </body>
 
 </html>
