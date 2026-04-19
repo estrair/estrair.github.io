@@ -20,7 +20,10 @@ z-index:1000;
 
 .menu-container{
 position:relative;
-margin-left:-10px;
+display:inline-block;
+width:auto;
+height:auto;
+z-index:1000;
 }
 
 /* HAMBURGER ICON */
@@ -73,21 +76,21 @@ background:rgba(255,255,255,0.05);
 
 .menu-dropdown{
 opacity:0;
-transform:translateY(-10px);
 pointer-events:none;
+transform:translateY(8px);
 
 position:absolute;
-top:100%;
+top:48px;
 left:0;
 
-background:rgba(0,0,0,0.9);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,.88);
+border-radius:12px;
+padding:10px 0;
+min-width:190px;
 
-border-radius:10px;
-padding:8px 0;
-min-width:200px;
+box-shadow:0 12px 28px rgba(0,0,0,.35);
 
-transition:opacity .25s ease, transform .25s ease;
+transition:all .25s ease;
 z-index:1001;
 }
 
@@ -409,4 +412,59 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:60px 30px;
+}
+
+@media (max-width: 768px){
+
+nav{
+padding:16px 18px;
+}
+
+.logo img{
+height:42px;
+}
+
+.main-title{
+font-size:46px;
+}
+
+.hero-subtitle{
+font-size:20px;
+margin-bottom:28px;
+}
+
+.hero-statement{
+font-size:22px;
+line-height:1.45;
+margin-bottom:35px;
+}
+
+.hero-founder{
+font-size:18px;
+}
+
+.hero-email a{
+font-size:16px;
+}
+
+.hero{
+padding:40px 20px 60px 20px;
+min-height:82vh;
+}
+
+.menu-dropdown{
+top:42px;
+min-width:170px;
+}
+
+.menu-dropdown a{
+font-size:18px;
+padding:14px 18px;
+}
+
+footer{
+font-size:12px;
+padding:18px;
+}
+
 }
