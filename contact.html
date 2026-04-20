@@ -1,82 +1,78 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!-- 
+  ESTRAIR - CONTACT PAGE 
+  Paste this into a HubSpot Custom HTML module on the Contact page.
+-->
+<style>
+  .estrair-page-wrapper {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0D1B2A;
+    color: #FFFFFF;
+    padding: 80px 20px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .estrair-card {
+    background-color: #162535;
+    border-radius: 12px;
+    padding: 60px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-top: 4px solid #F5820A; /* Brand Orange */
+  }
+  .estrair-card h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #F5820A;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  .estrair-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #C8D8E8;
+    margin-bottom: 30px;
+  }
+  .estrair-card .contact-email {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1ABC9C; /* Brand Teal */
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 2px solid #1ABC9C;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: rgba(26, 188, 156, 0.05);
+  }
+  .estrair-card .contact-email:hover {
+    background-color: #1ABC9C;
+    color: #0D1B2A;
+    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .estrair-card { padding: 40px 20px; }
+    .estrair-card h1 { font-size: 28px; }
+    .estrair-card p { font-size: 16px; }
+    .estrair-card .contact-email { font-size: 16px; padding: 12px 20px; }
+  }
+</style>
 
-<title>Contact | EstrAir</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="icon" type="image/png" href="favicon.png">
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<nav>
-
-<div class="menu-container">
-
-<button class="menu-icon" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</button>
-
-<div class="menu-dropdown" id="mobileMenu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="science.html">Science</a>
-<a href="contact.html">Contact</a>
+<div class="estrair-page-wrapper">
+  <div class="estrair-card">
+    <h1>Contact</h1>
+    
+    <p>For investment, research collaboration, or general inquiries:</p>
+    
+    <a href="mailto:estrairofficial@gmail.com" class="contact-email">
+      estrairofficial@gmail.com
+    </a>
+  </div>
 </div>
-
-</div>
-
-<div class="logo">
-<img src="logo.png" alt="EstrAir">
-</div>
-
-</nav>
-
-<section>
-
-<div class="page">
-
-<div class="page-card">
-
-<h1>Contact</h1>
-
-<p>For investment, research collaboration, or general inquiries:</p>
-<p><strong>estrairofficial@gmail.com</strong></p>
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-function toggleMenu() {
-document.getElementById("mobileMenu").classList.toggle("show");
-}
-
-window.toggleMenu = toggleMenu;
-
-document.addEventListener("click", function(e){
-const menu = document.getElementById("mobileMenu");
-const button = document.querySelector(".menu-icon");
-
-if (!menu.contains(e.target) && !button.contains(e.target)){
-menu.classList.remove("show");
-}
-});
-
-});
-</script>
-
-</body>
-
-</html>
