@@ -1,101 +1,60 @@
-<!-- 
-  ESTRAIR - SCIENCE PAGE 
-  Paste this into a HubSpot Custom HTML module on the Science page.
--->
-<style>
-  .estrair-page-wrapper {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0D1B2A;
-    color: #FFFFFF;
-    padding: 80px 20px;
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .estrair-card {
-    background-color: #162535;
-    border-radius: 12px;
-    padding: 60px;
-    max-width: 800px;
-    width: 100%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border-top: 4px solid #1ABC9C; /* Brand Teal */
-  }
-  .estrair-card h1 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #1ABC9C;
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-  .estrair-card p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #C8D8E8;
-    margin-bottom: 24px;
-  }
-  .estrair-card ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 30px;
-  }
-  .estrair-card ul li {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #C8D8E8;
-    margin-bottom: 15px;
-    padding-left: 30px;
-    position: relative;
-  }
-  .estrair-card ul li::before {
-    content: "•";
-    color: #F5820A; /* Brand Orange bullet */
-    font-size: 24px;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: -2px;
-  }
-  .estrair-card .disclaimer {
-    margin-top: 40px;
-    font-size: 14px;
-    color: #7A9BB5;
-    font-style: italic;
-    border-top: 1px solid #1E3A50;
-    padding-top: 20px;
-    line-height: 1.6;
-  }
-  
-  @media (max-width: 768px) {
-    .estrair-card { padding: 40px 20px; }
-    .estrair-card h1 { font-size: 28px; }
-    .estrair-card p, .estrair-card ul li { font-size: 16px; }
-  }
-</style>
+<!DOCTYPE html>
+<!-- ============================================================
+     PASTE THIS INTO: science.html  in your GitHub repo
+     Steps: Click science.html → pencil icon → select all → delete → paste → Commit changes
+     ============================================================ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Science | EstrAir</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+</head>
+<body>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-<div class="estrair-page-wrapper">
-  <div class="estrair-card">
-    <h1>Scientific Focus</h1>
-    
-    <p>EstrAir focuses on the intersection of airway physiology, hormonal biology, and sleep health.</p>
-    
-    <ul>
-      <li>Hormonal influences on airway tissue structure and function.</li>
-      <li>Changes in upper airway integrity associated with menopause.</li>
-      <li>Implications for voice, breathing, and sleep quality.</li>
-      <li>Exploration of localized therapeutic approaches.</li>
+  <!-- Navigation -->
+  <nav>
+    <span class="nav-logo">EstrAir&trade;</span>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="science.html" class="active">Science</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-    
-    <p>This work is exploratory and aims to better understand an under-recognized aspect of women's health.</p>
-    
-    <div class="disclaimer">
-      EstrAir is in the research and development phase. No products are currently available for clinical use.<br><br>
-      Investigational only. Not FDA approved.
+  </nav>
+
+  <!-- Page Content -->
+  <main class="page-wrapper">
+    <div class="card accent-teal">
+      <h1>Scientific Focus</h1>
+
+      <p>EstrAir focuses on the intersection of airway physiology, hormonal biology, and sleep health — an area that has been consistently under-researched and underserved in women's medicine.</p>
+
+      <ul class="science-list">
+        <li>Hormonal influences on airway tissue structure and function.</li>
+        <li>Changes in upper airway integrity associated with menopause.</li>
+        <li>Implications for voice, breathing, and sleep quality.</li>
+        <li>Exploration of localized therapeutic approaches.</li>
+      </ul>
+
+      <p>This work is exploratory and aims to better understand an under-recognized aspect of women's health. EstrAir is in the research and development phase. No products are currently available for clinical use.</p>
+
+      <!-- Small disclaimer — intentionally smaller than body text -->
+      <div class="disclaimer">
+        Investigational only. Not FDA approved. &copy; 2026 EstrAir&trade;. All rights reserved.
+      </div>
     </div>
-  </div>
-</div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div>Investigational only. Not FDA approved.</div>
+    <div class="copyright">&copy; 2026 EstrAir&trade;. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
