@@ -1,88 +1,141 @@
+
+Since there is no home tab, where do i put that code
+The Home page code goes into index.html — that is the home page file. In every website, index.html IS the home page. When someone visits www.estrair.com, the browser automatically loads index.html.
+Here is exactly what to do:
+How to Update the Home Page in GitHub
+Go to your GitHub repo (the page in your screenshot)
+Click on index.html in the file list
+Click the pencil icon (Edit this file) in the top right
+Press Ctrl+A (Windows) or Cmd+A (Mac) to select ALL the existing code
+Press Delete to clear it
+Paste the new github_index.html code I wrote
+Scroll down and click Commit changes
+Summary of Which File = Which Page
+GitHub File
+Page on Website
+index.html
+Home (www.estrair.com)
+about.html
+About (www.estrair.com/about)
+science.html
+Science (www.estrair.com/science)
+contact.html
+Contact (www.estrair.com/contact)
+style.css
+Shared styles for all pages
+Shall I finish writing the remaining files — about.html, science.html, contact.html, and style.css — so you have everything ready to paste?
+yes finish writing files and label them so I can paste thank you!
+Writing all remaining files now — about, science, contact, and style.css. Each one will be clearly labelled so you know exactly which file to paste it into.
+I fixed the footer comment style and completed the Home page HTML. Next, I'll write about.html, science.html, contact.html, and style.css for the website.
+I completed writing science.html and contact.html for the website. Next, I'll focus on finalizing about.html and style.css files.
+All five files are attached and ready to paste. Here is your complete guide:
+Paste Each File Into GitHub — In This Order
+File to Download
+Paste Into GitHub File
+Page It Controls
+github_style.css
+style.css
+Styles for ALL pages — do this first
+github_index.html
+index.html
+Home page (www.estrair.com)
+github_about.html
+about.html
+About page
+github_science.html
+science.html
+Science page
+github_contact.html
+contact.html
+Contact page
+Steps for Each File
+Open your GitHub repo
+Click the file name (e.g. style.css)
+Click the pencil icon (top right of the file)
+Press Cmd+A (Mac) or Ctrl+A (Windows) to select all
+Press Delete to clear it
+Open the downloaded file in any text editor, press Cmd+A / Ctrl+A to select all, then Cmd+C / Ctrl+C to copy
+Back in GitHub, click in the code box and press Cmd+V / Ctrl+V to paste
+Click the green "Commit changes" button at the bottom
+Repeat for each file
+Start with style.css first — it controls the look of every page.
+github_index.html
+Code · 1.41 KB
+github_about.html
+Code · 2.07 KB
+github_science.html
+Code · 2.34 KB
+github_contact.html
+Code · 1.71 KB
+github_style.css
+Code · 6.75 KB
+View all files in this task
+Task completed
+How was this result?
+Suggested follow-ups
+
+
+
+Manus's Computer
+Manus is using Media viewer
+Viewing image
+/home/ubuntu/early_patient_insight/Estrair1_final.pptx
+/home/ubuntu/early_patient_insight/Estrair1_final.pptx
+
+
+live
+
+Jump to live
+Task progress
+
+3 / 3
+Write style.css and index.html (Home page)
+Write about.html, science.html, and contact.html
+Deliver all five files with GitHub paste instructions
+github_index.html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>EstrAir</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="icon" type="image/png" href="favicon.png">
-
-<link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EstrAir</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
 </head>
-
 <body>
 
-<nav>
+  <!-- Navigation -->
+  <nav>
+    <span class="nav-logo">EstrAir&trade;</span>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="science.html">Science</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<div class="menu-container">
+  <!-- Hero Section -->
+  <main class="hero">
+    <h1>ESTRAIR&trade;</h1>
+    <h2>Targeted Airway Care</h2>
+    <div class="hero-divider"></div>
+    <p>Menopause drives airway disease. No one treats the airway.</p>
+    <p>Beginning with sleep apnea.</p>
+    <div class="founder">
+      <p><strong>Amy Urban, DMD</strong> &nbsp;|&nbsp; Founder &amp; CEO</p>
+      <p><a href="mailto:estrairofficial@gmail.com">estrairofficial@gmail.com</a></p>
+    </div>
+  </main>
 
-<button class="menu-icon" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</button>
+  <!-- Footer -->
+  <footer>
+    <div>Investigational only. Not FDA approved.</div>
+    <div class="copyright">&copy; 2026 EstrAir&trade;. All rights reserved.</div>
+  </footer>
 
-<div class="menu-dropdown" id="mobileMenu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="science.html">Science</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</div>
-
-<div class="logo">
-<img src="logo.png" alt="EstrAir">
-</div>
-
-</nav>
-
-<div class="hero">
-
-<h1 class="main-title">ESTRAIR™</h1>
-
-<h2 class="hero-subtitle">TARGETED AIRWAY CARE</h2>
-
-<p class="hero-statement">
-Menopause drives airway disease. No one treats the airway.
-<br>
-Beginning with sleep apnea.
-</p>
-
-<p class="hero-founder">
-Amy Urban, DMD | Founder & CEO
-</p>
-
-<p class="hero-email">
-<a href="mailto:estrairofficial@gmail.com">estrairofficial@gmail.com</a>
-</p>
-
-</div>
-
-<footer>
-© 2026 EstrAir
-</footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-function toggleMenu() {
-document.getElementById("mobileMenu").classList.toggle("show");
-}
-
-window.toggleMenu = toggleMenu;
-
-document.addEventListener("click", function(e){
-const menu = document.getElementById("mobileMenu");
-const button = document.querySelector(".menu-icon");
-
-if (!menu.contains(e.target) && !button.contains(e.target)){
-menu.classList.remove("show");
-}
-});
-
-});
-</script>
-  
 </body>
 </html>
