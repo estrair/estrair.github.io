@@ -496,16 +496,15 @@ section { padding: 104px 5vw; }
   margin-top: 60px;
 }
 .founder-photo {
-  aspect-ratio: 1;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(14,114,134,0.06), rgba(14,114,134,0.13));
-  border: 1.5px dashed rgba(14,114,134,0.2);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
+.founder-photo img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); object-fit: cover; }
 .founder-photo svg { width: 52px; height: 52px; stroke: var(--teal); fill: none; stroke-width: 1.5; opacity: 0.4; }
 .founder-photo span { font-size: 0.8125rem; color: var(--teal); opacity: 0.5; font-weight: 500; }
 .founder-name { font-size: 1.75rem; font-weight: 800; color: var(--charcoal); margin-bottom: 4px; }
