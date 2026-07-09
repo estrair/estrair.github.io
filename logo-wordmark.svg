@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <!-- EstrAir wordmark in Manrope/system font fallback, teal #0E7286 -->
+  <!-- Using a path-based approach for the wordmark to match the logo exactly -->
+  
+  <!-- Background: transparent -->
+  
+  <!-- Wordmark text: EstrAir -->
+  <text
+    x="0"
+    y="88"
+    font-family="Manrope, 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="96"
+    font-weight="800"
+    fill="#0E7286"
+    letter-spacing="-2"
+  >EstrAir</text>
+  
+  <!-- Tagline -->
+  <text
+    x="2"
+    y="112"
+    font-family="Manrope, 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="14"
+    font-weight="400"
+    fill="#6B7280"
+    letter-spacing="0.5"
+  >Advancing precision localized estrogen therapy</text>
+</svg>

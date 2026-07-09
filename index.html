@@ -3,37 +3,789 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EstrAir</title>
+
+  <!-- Primary Meta -->
+  <title>EstrAir™ — Precision Localized Estrogen Therapy</title>
+  <meta name="description" content="EstrAir is developing precision localized estrogen therapies designed to restore estrogen-responsive tissues through targeted delivery while minimizing systemic exposure." />
+  <meta name="keywords" content="EstrAir, localized estrogen therapy, precision medicine, biotech, estrogen-responsive tissues, menopause, airway health, oral health, laryngeal health" />
+  <meta name="author" content="Amy Urban, DMD" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.estrair.com/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.estrair.com/" />
+  <meta property="og:title"       content="EstrAir™ — Precision Localized Estrogen Therapy" />
+  <meta property="og:description" content="EstrAir is developing precision localized estrogen therapies designed to restore estrogen-responsive tissues through targeted delivery while minimizing systemic exposure." />
+  <meta property="og:image"       content="https://www.estrair.com/logo.jpg" />
+  <meta property="og:image:width"  content="1456" />
+  <meta property="og:image:height" content="816" />
+  <meta property="og:site_name"   content="EstrAir" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="EstrAir™ — Precision Localized Estrogen Therapy" />
+  <meta name="twitter:description" content="Precision localized estrogen therapy. Targeted delivery. Minimal systemic exposure." />
+  <meta name="twitter:image"       content="https://www.estrair.com/logo.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon"             type="image/x-icon"  href="favicon.ico" />
+  <link rel="icon"             type="image/png"     href="favicon.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                      href="apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EstrAir",
+    "url": "https://www.estrair.com",
+    "logo": "https://www.estrair.com/logo.jpg",
+    "description": "EstrAir is developing precision localized estrogen therapies designed to restore estrogen-responsive tissues through targeted delivery while minimizing systemic exposure.",
+    "founder": {
+      "@type": "Person",
+      "name": "Amy Urban",
+      "jobTitle": "Founder & CEO"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@estrair.com",
+      "contactType": "general"
+    }
+  }
+  </script>
 </head>
 <body>
-  <nav>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <span class="nav-logo">EstrAir&trade;</span>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="science.html">Science</a></li>
-      <li><a href="contact.html">Contact</a></li>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-wrap">
+    <a href="#home" class="nav-logo" aria-label="EstrAir — go to homepage">
+      <img src="logo-nav.svg" alt="EstrAir" width="120" height="32" />
+    </a>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#science">Science</a></li>
+      <li><a href="#applications">Applications</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
-  </nav>
-  <main class="hero">
-    <h1>ESTRAIR&trade;</h1>
-    <h2>Targeted Airway Care</h2>
-    <div class="hero-divider"></div>
-    <p>Menopause drives airway disease. No one treats the airway.</p>
-    <p>Beginning with sleep apnea.</p>
-    <div class="founder">
-      <p><strong>Amy Urban, DMD</strong> &nbsp;|&nbsp; Founder &amp; CEO</p>
-      <p><a href="mailto:info@estrair.com">info@estrair.com</a></p>
+
+    <button class="nav-burger" id="burger"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section id="home" aria-label="Hero — EstrAir">
+
+  <div class="hero-inner">
+
+    <!-- Animated logo: pure SVG — wordmark + arc animation, no image masking needed -->
+    <div class="hero-logo-wrap">
+      <!--
+        All elements drawn in SVG:
+          • "EstrAir" wordmark in Manrope 800, teal #0E7286
+          • Teal i-dot (already part of the letter, but we add a reference dot
+            at the i-dot position as the arc start point)
+          • Animated arc draws itself from the i-dot to the endpoint
+          • Teal travel dot rides the arc
+          • Orange bullseye appears at the endpoint
+          • Tagline below in gray
+
+        SVG viewBox: 600 × 200 (proportional to the logo layout)
+        Key coordinates (in this 600×200 space):
+          i-dot center : (338, 28)  — above the "i" in EstrAir
+          arc control  : (460, -30) — peak of the arc above the wordmark
+          arc endpoint : (590, 90)  — right side, below baseline
+      -->
+      <svg id="hero-logo-svg"
+           class="hero-logo-svg"
+           viewBox="0 0 640 220"
+           preserveAspectRatio="xMidYMid meet"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="EstrAir — Advancing precision localized estrogen therapy">
+
+        <defs>
+          <!-- Google Fonts Manrope loaded via CSS; SVG text uses it -->
+        </defs>
+
+        <!-- Wordmark: EstrAir in Manrope ExtraBold -->
+        <text id="hero-wordmark"
+              x="0" y="130"
+              font-family="Manrope, 'Plus Jakarta Sans', Inter, system-ui, sans-serif"
+              font-size="128"
+              font-weight="800"
+              fill="#0E7286"
+              letter-spacing="-3"
+              opacity="0">
+          EstrAir
+        </text>
+
+        <!-- Tagline -->
+        <text id="hero-tagline"
+              x="2" y="165"
+              font-family="Manrope, 'Plus Jakarta Sans', Inter, system-ui, sans-serif"
+              font-size="17"
+              font-weight="400"
+              fill="#6B7280"
+              letter-spacing="0.3"
+              opacity="0">
+          Advancing precision localized estrogen therapy
+        </text>
+
+        <!--
+          Arc animation elements.
+          Coordinates in 640×220 viewBox:
+            i-dot : approx x=338, y=18  (above the dot of the letter i)
+            control: x=490, y=-40       (arc peak, above the canvas)
+            endpoint: x=632, y=100      (right edge, mid-height)
+        -->
+
+        <!-- Animated arc path -->
+        <path id="hero-arc-draw"
+              d="M 338 18 Q 490 -40 632 100"
+              fill="none"
+              stroke="#F56B3A"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              opacity="0" />
+
+        <!-- Motion path (invisible) for JS getPointAtLength() -->
+        <path id="hero-arc"
+              d="M 338 18 Q 490 -40 632 100"
+              fill="none"
+              stroke="none" />
+
+        <!-- Travel dot: teal, JS animates position -->
+        <circle id="hero-travel-dot"
+                cx="338" cy="18" r="7"
+                fill="#0E7286"
+                opacity="0" />
+
+        <!-- Bullseye at endpoint (632, 100) -->
+        <g id="hero-bullseye">
+          <!-- Outer ring -->
+          <circle class="bs-layer" cx="632" cy="100" r="22"
+                  fill="none" stroke="#F56B3A" stroke-width="1"
+                  data-opacity="0.35"
+                  style="transform-origin: 632px 100px;" />
+          <!-- Inner ring -->
+          <circle class="bs-layer" cx="632" cy="100" r="13"
+                  fill="none" stroke="#F56B3A" stroke-width="1.5"
+                  data-opacity="0.7"
+                  style="transform-origin: 632px 100px;" />
+          <!-- Centre dot -->
+          <circle class="bs-layer" cx="632" cy="100" r="5.5"
+                  fill="#F56B3A"
+                  data-opacity="1"
+                  style="transform-origin: 632px 100px;" />
+        </g>
+
+      </svg>
     </div>
-  </main>
-  <footer>
-    <div>Investigational only. Not FDA approved.</div>
-    <div class="copyright">&copy; 2026 EstrAir&trade;. All rights reserved.</div>
-  </footer>
+
+    <h1 class="hero-headline">
+      Advancing <em>Precision Localized</em><br />Estrogen Therapy
+    </h1>
+
+    <p class="hero-sub">
+      EstrAir is developing precision localized estrogen therapies designed to restore
+      estrogen-responsive tissues through targeted delivery while minimizing systemic exposure.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#platform" class="btn btn-primary">
+        Learn More
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PLATFORM — WHY LOCALIZED?
+════════════════════════════════════════════════════════════ -->
+<section id="platform" aria-labelledby="platform-title">
+  <div class="inner">
+
+    <!-- Why Localized grid -->
+    <div class="why-grid">
+      <div class="why-text reveal">
+        <span class="eyebrow">Why Localized?</span>
+        <h2 class="sec-title" id="platform-title">Targeted Where It Matters Most</h2>
+        <div class="bar"></div>
+        <p>
+          Instead of exposing the entire body to hormone therapy, EstrAir is developing
+          technologies that precisely deliver micro-dose estrogen to estrogen-responsive
+          tissues where restoration is needed.
+        </p>
+        <p>
+          This approach is designed to maximize local therapeutic effect while minimizing
+          the systemic hormone burden — a fundamental shift in how estrogen therapy is
+          conceived and delivered.
+        </p>
+      </div>
+
+      <!-- Convergence graphic — static, clean -->
+      <div class="conv-wrap reveal d2">
+        <svg class="conv-svg"
+             viewBox="0 0 320 320"
+             xmlns="http://www.w3.org/2000/svg"
+             role="img"
+             aria-label="Diagram showing localized delivery converging to a single target">
+
+          <!-- Outer tissue nodes -->
+          <circle cx="50"  cy="50"  r="18" fill="none" stroke="#0E7286" stroke-width="1.5" opacity="0.25"/>
+          <circle cx="270" cy="45"  r="14" fill="none" stroke="#0E7286" stroke-width="1.5" opacity="0.25"/>
+          <circle cx="35"  cy="190" r="13" fill="none" stroke="#0E7286" stroke-width="1.5" opacity="0.25"/>
+          <circle cx="285" cy="200" r="16" fill="none" stroke="#0E7286" stroke-width="1.5" opacity="0.25"/>
+          <circle cx="145" cy="28"  r="12" fill="none" stroke="#0E7286" stroke-width="1.5" opacity="0.25"/>
+          <circle cx="235" cy="275" r="14" fill="none" stroke="#0E7286" stroke-width="1.5" opacity="0.25"/>
+
+          <!-- Converging lines -->
+          <line x1="50"  y1="50"  x2="160" y2="160" stroke="#0E7286" stroke-width="1" opacity="0.18"/>
+          <line x1="270" y1="45"  x2="160" y2="160" stroke="#0E7286" stroke-width="1" opacity="0.18"/>
+          <line x1="35"  y1="190" x2="160" y2="160" stroke="#0E7286" stroke-width="1" opacity="0.18"/>
+          <line x1="285" y1="200" x2="160" y2="160" stroke="#0E7286" stroke-width="1" opacity="0.18"/>
+          <line x1="145" y1="28"  x2="160" y2="160" stroke="#0E7286" stroke-width="1" opacity="0.18"/>
+          <line x1="235" y1="275" x2="160" y2="160" stroke="#0E7286" stroke-width="1" opacity="0.18"/>
+
+          <!-- Bullseye target -->
+          <circle cx="160" cy="160" r="44" fill="none" stroke="#F56B3A" stroke-width="1"   opacity="0.22"/>
+          <circle cx="160" cy="160" r="27" fill="none" stroke="#F56B3A" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="160" cy="160" r="13" fill="none" stroke="#F56B3A" stroke-width="2"   opacity="0.8"/>
+          <circle cx="160" cy="160" r="6"  fill="#F56B3A"/>
+        </svg>
+      </div>
+    </div><!-- /why-grid -->
+
+    <!-- Platform pillars -->
+    <div class="pillars">
+
+      <div class="pillar reveal d1">
+        <div class="pillar-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <h3>Precision Delivery</h3>
+        <p>Targeted micro-dose administration to specific tissue sites</p>
+      </div>
+
+      <div class="pillar reveal d2">
+        <div class="pillar-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Localized Therapy</h3>
+        <p>Estrogen delivered where restoration is needed, not systemically</p>
+      </div>
+
+      <div class="pillar reveal d3">
+        <div class="pillar-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Minimal Systemic Exposure</h3>
+        <p>Designed to reduce whole-body hormone burden</p>
+      </div>
+
+      <div class="pillar reveal d4">
+        <div class="pillar-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        </div>
+        <h3>Platform Expansion</h3>
+        <p>Scalable technology across multiple estrogen-responsive tissues</p>
+      </div>
+
+    </div><!-- /pillars -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     APPLICATIONS
+════════════════════════════════════════════════════════════ -->
+<section id="applications" aria-labelledby="app-title">
+  <div class="inner">
+
+    <div class="reveal">
+      <span class="eyebrow">Areas of Scientific Interest</span>
+      <h2 class="sec-title" id="app-title">Estrogen-Responsive Tissues</h2>
+      <div class="bar"></div>
+      <p class="sec-sub">
+        Our platform has potential applications in estrogen-responsive tissues including
+        the following areas of active scientific interest.
+      </p>
+    </div>
+
+    <div class="app-grid">
+
+      <div class="app-card reveal d1">
+        <div class="app-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <div>
+          <h3>Oral Health</h3>
+          <p>Localized therapy for oral mucosal and salivary tissues. Estrogen plays a key role
+             in maintaining mucosal integrity, salivary gland function, and tissue hydration
+             throughout the oral cavity.</p>
+        </div>
+      </div>
+
+      <div class="app-card reveal d2">
+        <div class="app-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 0 20"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M2 12h20"/><path d="M12 2c-2.76 3.63-4 7.27-4 10s1.24 6.37 4 10"/><path d="M12 2c2.76 3.63 4 7.27 4 10s-1.24 6.37-4 10"/></svg>
+        </div>
+        <div>
+          <h3>Upper Airway</h3>
+          <p>Localized estrogen delivery to upper airway tissues. Estrogen receptors are present
+             throughout the upper airway and may influence tissue tone, mucosal health, and
+             airway patency.</p>
+        </div>
+      </div>
+
+      <div class="app-card reveal d3">
+        <div class="app-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <div>
+          <h3>Voice &amp; Laryngeal Health</h3>
+          <p>Supporting estrogen-responsive tissues involved in vocal function. The larynx
+             contains estrogen receptors, and hormonal changes are known to affect vocal fold
+             structure and voice quality.</p>
+        </div>
+      </div>
+
+      <div class="app-card reveal d4">
+        <div class="app-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div>
+          <h3>Future Applications</h3>
+          <p>Precision localized delivery across additional estrogen-responsive tissues.
+             EstrAir's platform is designed for expansion as the science of localized hormone
+             therapy continues to evolve.</p>
+        </div>
+      </div>
+
+    </div><!-- /app-grid -->
+
+    <div class="disclaimer reveal">
+      <strong>Investigational only.</strong> EstrAir's technologies are in early-stage
+      development. All potential applications are investigational and have not been evaluated
+      or approved by the FDA or any regulatory authority.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCIENCE
+════════════════════════════════════════════════════════════ -->
+<section id="science" aria-labelledby="sci-title">
+  <div class="inner">
+    <div class="sci-grid">
+
+      <div class="sci-text reveal">
+        <span class="eyebrow">Scientific Foundation</span>
+        <h2 class="sec-title" id="sci-title">The Biology Behind the Platform</h2>
+        <div class="bar"></div>
+        <p>
+          Estrogen receptors are present throughout numerous tissues that rely on estrogen for
+          normal structure, hydration, and function. When estrogen declines — as it does during
+          perimenopause and menopause — these tissues can undergo significant structural and
+          functional changes.
+        </p>
+        <p>
+          EstrAir is developing localized delivery technologies designed to restore tissue health
+          at the site of need while minimizing systemic exposure. Our approach is grounded in the
+          established biology of estrogen receptor distribution and tissue-specific estrogen
+          dependence.
+        </p>
+        <div class="sci-stats">
+          <div class="sci-stat">
+            <div class="num">ERα/β</div>
+            <div class="lbl">Estrogen receptors found throughout oral, airway, and laryngeal tissues</div>
+          </div>
+          <div class="sci-stat">
+            <div class="num">1B+</div>
+            <div class="lbl">Women globally affected by menopause-related tissue changes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sci-diagram reveal d2">
+        <svg viewBox="0 0 400 400"
+             xmlns="http://www.w3.org/2000/svg"
+             role="img"
+             aria-label="Bar chart showing estrogen receptor presence across tissue types">
+
+          <!-- Chart title -->
+          <text x="200" y="32"  text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#1A2332">Estrogen Receptor Presence</text>
+          <text x="200" y="50"  text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" fill="#64748b">by tissue type (illustrative)</text>
+
+          <!-- Axes -->
+          <line x1="64" y1="70"  x2="64"  y2="310" stroke="#f1f5f9" stroke-width="1.5"/>
+          <line x1="64" y1="310" x2="370" y2="310" stroke="#f1f5f9" stroke-width="1.5"/>
+
+          <!-- Grid lines -->
+          <line x1="64" y1="130" x2="370" y2="130" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="64" y1="190" x2="370" y2="190" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="64" y1="250" x2="370" y2="250" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4,4"/>
+
+          <!-- Bars — static, full height -->
+          <rect id="b1" x="82"  y="80"  width="48" height="230" rx="5" fill="#0E7286" opacity="0.88"/>
+          <rect id="b2" x="158" y="110" width="48" height="200" rx="5" fill="#0E7286" opacity="0.72"/>
+          <rect id="b3" x="234" y="145" width="48" height="165" rx="5" fill="#0E7286" opacity="0.56"/>
+          <rect id="b4" x="310" y="175" width="48" height="135" rx="5" fill="#F56B3A" opacity="0.82"/>
+
+          <!-- X-axis labels -->
+          <text x="106" y="330" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9.5" fill="#64748b">Oral</text>
+          <text x="106" y="342" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9.5" fill="#64748b">Mucosa</text>
+          <text x="182" y="330" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9.5" fill="#64748b">Salivary</text>
+          <text x="182" y="342" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9.5" fill="#64748b">Glands</text>
+          <text x="258" y="330" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9.5" fill="#64748b">Upper</text>
+          <text x="258" y="342" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9.5" fill="#64748b">Airway</text>
+          <text x="334" y="330" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9.5" fill="#F56B3A">Laryngeal</text>
+          <text x="334" y="342" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9.5" fill="#F56B3A">Tissue</text>
+
+          <!-- Y-axis labels -->
+          <text x="56" y="314" text-anchor="end" font-family="Manrope,sans-serif" font-size="9" fill="#94a3b8">Low</text>
+          <text x="56" y="194" text-anchor="end" font-family="Manrope,sans-serif" font-size="9" fill="#94a3b8">Med</text>
+          <text x="56" y="74"  text-anchor="end" font-family="Manrope,sans-serif" font-size="9" fill="#94a3b8">High</text>
+
+          <!-- Legend -->
+          <rect x="82"  y="370" width="11" height="11" rx="3" fill="#0E7286" opacity="0.88"/>
+          <text x="97"  y="380" font-family="Manrope,sans-serif" font-size="9.5" fill="#64748b">EstrAir target tissues</text>
+          <rect x="220" y="370" width="11" height="11" rx="3" fill="#F56B3A" opacity="0.82"/>
+          <text x="235" y="380" font-family="Manrope,sans-serif" font-size="9.5" fill="#64748b">Laryngeal focus</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     VISION
+════════════════════════════════════════════════════════════ -->
+<section id="vision" aria-labelledby="vision-title">
+  <div class="inner">
+    <div class="reveal" style="text-align:center;">
+      <span class="eyebrow">Our Vision</span>
+      <div class="bar" style="margin:16px auto 32px;"></div>
+
+      <p class="vision-quote">
+        "Rather than treating the entire body, what if we could restore
+        exactly the tissue that needs it?"
+      </p>
+
+      <p class="vision-stmt" id="vision-title">
+        EstrAir is building a platform for<br />
+        <span>precision localized estrogen therapy.</span>
+      </p>
+
+      <a href="#contact" class="btn btn-primary" style="display:inline-flex;">
+        Connect With Us
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOUNDER
+════════════════════════════════════════════════════════════ -->
+<section id="founder" aria-labelledby="founder-title">
+  <div class="inner">
+
+    <div class="reveal">
+      <span class="eyebrow">Leadership</span>
+      <h2 class="sec-title" id="founder-title">Our Founder</h2>
+      <div class="bar"></div>
+    </div>
+
+    <div class="founder-grid">
+
+      <div class="founder-photo reveal" role="img" aria-label="Photo of Amy Urban, DMD — coming soon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>Photo coming soon</span>
+      </div>
+
+      <div class="reveal d2">
+        <div class="founder-name">Amy Urban, DMD</div>
+        <div class="founder-role">Founder &amp; Chief Executive Officer</div>
+        <div class="founder-bio">
+          <p>
+            Amy Urban, DMD is a dentist and entrepreneur with deep clinical expertise in oral
+            medicine and a focused interest in the intersection of hormonal health and tissue
+            biology. Her clinical observations of estrogen-related changes in oral and airway
+            tissues led her to identify a significant unmet need: the absence of targeted,
+            localized estrogen delivery for the tissues most affected by hormonal decline.
+          </p>
+          <p>
+            Dr. Urban founded EstrAir to address this gap — developing a platform designed to
+            deliver precision localized estrogen therapy to estrogen-responsive tissues while
+            minimizing systemic exposure. Her work bridges clinical dentistry, women's health,
+            and precision medicine.
+          </p>
+          <p>
+            EstrAir is currently in early-stage development. Dr. Urban is actively building
+            the scientific, clinical, and business foundation for the company.
+          </p>
+        </div>
+        <div class="founder-btns">
+          <a href="mailto:info@estrair.com" class="btn btn-primary btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Email
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+             class="btn btn-ghost btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="inner">
+
+    <div class="reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 class="sec-title" id="contact-title">Get in Touch</h2>
+      <div class="bar"></div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Contact info -->
+      <div class="reveal">
+        <h3>We'd love to hear from you.</h3>
+        <p>
+          Whether you're a potential investor, scientific collaborator, clinician, or simply
+          curious about our work — we welcome the conversation.
+        </p>
+
+        <div class="citem">
+          <div class="citem-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:info@estrair.com">info@estrair.com</a>
+          </div>
+        </div>
+
+        <div class="citem">
+          <div class="citem-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </div>
+          <div>
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              EstrAir on LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="citem">
+          <div class="citem-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Location</strong>
+            <span>United States</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="cform reveal d2">
+        <h3>Send a Message</h3>
+        <form id="cform" novalidate>
+          <div class="fg-row">
+            <div class="fg">
+              <label for="fn">First Name</label>
+              <input type="text" id="fn" name="first_name" placeholder="Jane" autocomplete="given-name" required />
+            </div>
+            <div class="fg">
+              <label for="ln">Last Name</label>
+              <input type="text" id="ln" name="last_name" placeholder="Smith" autocomplete="family-name" required />
+            </div>
+          </div>
+          <div class="fg">
+            <label for="em">Email Address</label>
+            <input type="email" id="em" name="email" placeholder="jane@example.com" autocomplete="email" required />
+          </div>
+          <div class="fg">
+            <label for="role">I am a...</label>
+            <select id="role" name="role">
+              <option value="">Select one</option>
+              <option value="investor">Investor</option>
+              <option value="collaborator">Scientific Collaborator</option>
+              <option value="clinician">Clinician</option>
+              <option value="press">Member of the Press</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message"
+                      placeholder="Tell us about your interest in EstrAir..."
+                      required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="foot-wrap">
+
+    <div class="foot-top">
+
+      <div class="foot-brand">
+        <img src="logo.jpg" alt="EstrAir" width="160" height="auto" />
+        <p>
+          Developing precision localized estrogen therapies for estrogen-responsive tissues.
+          Advancing the science of targeted delivery.
+        </p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#science">Science</a></li>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@estrair.com">info@estrair.com</a></li>
+          <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+        <div class="foot-social">
+          <a href="https://www.linkedin.com"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="soc-btn"
+             aria-label="EstrAir on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="mailto:info@estrair.com"
+             class="soc-btn"
+             aria-label="Email EstrAir">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /foot-top -->
+
+    <div class="foot-bottom">
+      <p>&copy; 2026 EstrAir™. All rights reserved.</p>
+      <p>Amy Urban, DMD &mdash; Founder &amp; CEO</p>
+    </div>
+
+    <div class="foot-disc">
+      Investigational only. EstrAir's technologies are in early-stage development and have not
+      been evaluated or approved by the FDA or any other regulatory authority. Nothing on this
+      website constitutes medical advice, a clinical claim, or a regulatory submission.
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- JavaScript (deferred) -->
+<script src="main.js" defer></script>
+
 </body>
 </html>
